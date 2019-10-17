@@ -23,12 +23,14 @@ converter.addEventListener('click', () => {
     } else {
           coefOut.innerText = '';
     }
-    let a = ',';
-    if ( moneyValue.value.includes(a) ) {
-        moneyValue.value.replace(a, '.');
+
+    if ( moneyValue.value.includes(',') ) {
+        moneyValue.value.replace("\\,",".");
+
+
     }
-    if ( moneyCoefficient.value.includes(a) ) {
-        moneyCoefficient.value.replace(a, '.');
+    if ( moneyCoefficient.value.includes(',') ) {
+        moneyCoefficient.value.replace("\\,",".");
     }
 })
 
