@@ -8,16 +8,18 @@
 </head>
 <body>
     <form>
+        <div id="money-out"></div>
         <label for="money-value">
             Enter value: <input type="text" id="money-value" name="money-value" required>
         </label>
         <br>
+        <div id="coef-out"></div>
         <label for="money-coefficient">
             Enter coefficient: <input type="text" id="money-coefficient" name="money-coefficient" required>
         </label>
         <br>
-        <input type="button" id="converter" value="Convert">
         <input type="reset" value="Reset">
+        <input type="button" id="converter" value="Convert">
         <br>
         <label for="result">
             Result: <input type="text" id="result" name="result" readonly>
