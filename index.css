@@ -1,0 +1,18 @@
+/* #money-value {
+    border: 2px solid black;
+}
+
+#money-coefficient {
+    border: 2px solid black;
+} */
+.reset {
+    border: 2px solid black !important;
+}
+
+.warning {
+    border: 2px solid red;
+}
+
+.warn {
+    border: 2px solid green;
+}

@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <form>
         <div id="money-out"></div>
         <label for="money-value">
-            Enter value: <input type="text" id="money-value" name="money-value" required>
+            Enter value: <input type="text" id="money-value" name="money-value">
         </label>
+        <br>
         <br>
         <div id="coef-out"></div>
         <label for="money-coefficient">
-            Enter coefficient: <input type="text" id="money-coefficient" name="money-coefficient" required>
+            Enter coefficient: <input type="text" id="money-coefficient" name="money-coefficient">
         </label>
         <br>
-        <input type="reset" value="Reset">
+        <br>
+        <input type="reset" value="Reset" id="reset">
         <input type="button" id="converter" value="Convert">
+        <br>
         <br>
         <label for="result">
             Result: <input type="text" id="result" name="result" readonly>
