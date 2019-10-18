@@ -20,10 +20,16 @@ converter.addEventListener('click', function() {
 
     if ( !Number(moneyValue.value) ) {
         moneyOut.innerText = 'Please, enter correct value to get result';
-        moneyValue.classList.add('warning');
+        if ( moneyValue.classList.contains('warning') === true ) {
+            moneyValue.classList.remove('warn');
+        } else if ( moneyValue.classList.contains('warning') === false ) {
+            moneyValue.classList.add('warning');
+        }
+        if ( moneyValue.classList.contains('warn') === true ) {
+            moneyValue.classList.toggle('warn');
+        }
     } else  {
         moneyOut.innerText = '';
-        moneyValue.classList.add('money-coefficient');
         moneyValue.classList.add('warn');
     }
 
@@ -33,7 +39,14 @@ converter.addEventListener('click', function() {
 
     if ( !Number(moneyCoefficient.value) ) {
         coefOut.innerText = 'Please, enter correct coefficient to get result';
-        moneyCoefficient.classList.add('warning');
+        if ( moneyCoefficient.classList.contains('warning') === true ) {
+             moneyCoefficient.classList.remove('warn');
+        } else if ( moneyCoefficient.classList.contains('warning') === false ) {
+             moneyCoefficient.classList.add('warning');
+        }
+        if ( moneyCoefficient.classList.contains('warn') === true ) {
+             moneyCoefficient.classList.toggle('warn');
+        }
     } else {
         coefOut.innerText = '';
         moneyCoefficient.classList.add('warn');
@@ -57,6 +70,25 @@ moneyCoefficient.addEventListener('keypress', function() {
 })
 
 reset.addEventListener('click', function() {
-    moneyValue.classList.add('reset');
-    moneyCoefficient.classList.add('reset');
+     if ( moneyValue.classList.contains('warning') === true ) {
+        moneyValue.classList.remove('warning');
+     } else if ( moneyValue.classList.contains('warning') === false ) {
+        moneyValue.classList.add('reset');
+     }
+     if ( moneyValue.classList.contains('warn') === true ) {
+        moneyValue.classList.remove('warn');
+     } else if ( moneyValue.classList.contains('warn') === false ) {
+        moneyValue.classList.add('reset');
+     }
+
+    if ( moneyCoefficient.classList.contains('warning') === true ) {
+        moneyCoefficient.classList.remove('warning');
+    } else if ( moneyCoefficient.classList.contains('warning') === false ) {
+        moneyCoefficient.classList.add('reset');
+    }
+    if ( moneyCoefficient.classList.contains('warn') === true ) {
+        moneyCoefficient.classList.remove('warn');
+    } else if ( moneyCoefficient.classList.contains('warn') === false ) {
+        moneyCoefficient.classList.add('reset');
+    }
 })
