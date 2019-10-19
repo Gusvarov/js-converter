@@ -10,7 +10,7 @@ const moneyCoefficientStyle = document.querySelector('.money-coefficient');
 
 converter.addEventListener('click', function() {
     if ( parseFloat(moneyValue.value) &&  parseFloat(moneyCoefficient.value) ) {
-        let coefficient = moneyCoefficient.value * moneyValue.value;
+        const coefficient = moneyCoefficient.value * moneyValue.value;
         result.value = coefficient;
     }
 
@@ -21,16 +21,16 @@ converter.addEventListener('click', function() {
     if ( !Number(moneyValue.value) ) {
         moneyOut.innerText = 'Please, enter correct value to get result';
         if ( moneyValue.classList.contains('warning') === true ) {
-            moneyValue.classList.remove('warn');
+            moneyValue.classList.remove('successed');
         } else if ( moneyValue.classList.contains('warning') === false ) {
             moneyValue.classList.add('warning');
         }
-        if ( moneyValue.classList.contains('warn') === true ) {
-            moneyValue.classList.toggle('warn');
+        if ( moneyValue.classList.contains('successed') === true ) {
+            moneyValue.classList.toggle('successed');
         }
     } else  {
         moneyOut.innerText = '';
-        moneyValue.classList.add('warn');
+        moneyValue.classList.add('successed');
     }
 
     if ( moneyValue.value === '' ) {
@@ -40,16 +40,16 @@ converter.addEventListener('click', function() {
     if ( !Number(moneyCoefficient.value) ) {
         coefOut.innerText = 'Please, enter correct coefficient to get result';
         if ( moneyCoefficient.classList.contains('warning') === true ) {
-             moneyCoefficient.classList.remove('warn');
+             moneyCoefficient.classList.remove('successed');
         } else if ( moneyCoefficient.classList.contains('warning') === false ) {
              moneyCoefficient.classList.add('warning');
         }
-        if ( moneyCoefficient.classList.contains('warn') === true ) {
-             moneyCoefficient.classList.toggle('warn');
+        if ( moneyCoefficient.classList.contains('successed') === true ) {
+             moneyCoefficient.classList.toggle('successed');
         }
     } else {
         coefOut.innerText = '';
-        moneyCoefficient.classList.add('warn');
+        moneyCoefficient.classList.add('successed');
     }
 
     if (moneyCoefficient.value === '' ) {
@@ -75,9 +75,9 @@ reset.addEventListener('click', function() {
      } else if ( moneyValue.classList.contains('warning') === false ) {
         moneyValue.classList.add('reset');
      }
-     if ( moneyValue.classList.contains('warn') === true ) {
-        moneyValue.classList.remove('warn');
-     } else if ( moneyValue.classList.contains('warn') === false ) {
+     if ( moneyValue.classList.contains('successed') === true ) {
+        moneyValue.classList.remove('successed');
+     } else if ( moneyValue.classList.contains('successed') === false ) {
         moneyValue.classList.add('reset');
      }
 
@@ -86,9 +86,9 @@ reset.addEventListener('click', function() {
     } else if ( moneyCoefficient.classList.contains('warning') === false ) {
         moneyCoefficient.classList.add('reset');
     }
-    if ( moneyCoefficient.classList.contains('warn') === true ) {
-        moneyCoefficient.classList.remove('warn');
-    } else if ( moneyCoefficient.classList.contains('warn') === false ) {
+    if ( moneyCoefficient.classList.contains('successed') === true ) {
+        moneyCoefficient.classList.remove('successed');
+    } else if ( moneyCoefficient.classList.contains('successed') === false ) {
         moneyCoefficient.classList.add('reset');
     }
 })

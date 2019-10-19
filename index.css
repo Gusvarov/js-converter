@@ -1,10 +1,3 @@
-/* #money-value {
-    border: 2px solid black;
-}
-
-#money-coefficient {
-    border: 2px solid black;
-} */
 .reset {
     border: 2px solid black;
 }
@@ -13,6 +6,6 @@
     border: 2px solid red;
 }
 
-.warn {
+.successed {
     border: 2px solid green;
 }
